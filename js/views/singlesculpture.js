@@ -1,16 +1,14 @@
 var SingleSculpture = Backbone.View.extend({
 	template: Handlebars.compile(
 		'<div>' +
-		'<h1>{{name}}</h1>' +
-		'<p><span class="label">{{category}}</span></p>' +
-		'<img src="photos/{{imagepath}}" class="img-polaroid" />' +
-		'</div>' +
-		'<p></p>' +
-		'<button type="button" class="btn btn-danger confirm-delete">Delete</button>'
+		// '<h1>{{name}}</h1>' +
+		// '<p><span class="label">{{neighborhood}}</span></p>' +
+		'<img src="images/{{mainimage}}" />' +
+		'</div>'
 	),
 
 	initialize: function  () {
-		console.log('fire mutherfocker');
+		// console.log('fire mutherfocker');
 		this.render();
 		this.listenTo(this.model, "change", this.render);
 	},

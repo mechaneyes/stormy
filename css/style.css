@@ -1,0 +1,5 @@
+body {background:#777;}
+.container {width:640px; background:white;}
+
+#thumbs img {float:left; padding-top:2px;}
+#thumbs img:nth-child(odd) {padding-right:2px;}

@@ -1,39 +1,29 @@
 [
 	{
-		"id": "calder-the_arch",
+		"id": "calder",
 		"url": "calder-the_arch",
 		"artist": "Alexander Calder",
 		"name": "The Arch, 1975",
 		"neighborhood": "North Woods",
-		"imagepath": "chili-con-carne.jpg",
-		"thumbpath": "thumb-calder-the_arch.jpg"
+		"mainimage": "main-calder-the_arch.jpg",
+		"thumbnail": "thumb-calder-five_swords.jpg"
 	},
 	{
-		"id": "funk",
-		"url": "funk",
-		"name": "Funk",
-		"category": "funk",
-		"imagepath": "funk.jpg"
+		"id": "calder2",
+		"url": "calder-the_arch",
+		"artist": "Alexander Calder",
+		"name": "The Arch, 1975",
+		"neighborhood": "South Woods",
+		"mainimage": "main-calder-the_arch.jpg",
+		"thumbnail": "thumb-calder-the_arch.jpg"
 	},
 	{
-		"id": "chili-con-carne",
-		"url": "chili-con-carne",
-		"name": "Chili con carne",
-		"category": "Entreés",
-		"imagepath": "chili-con-carne.jpg"
-	},
-	{
-		"id": "cheeseburger",
-		"url": "cheeseburger",
-		"name": "Cheeseburger",
-		"category": "Entreés",
-		"imagepath": "cheeseburger.jpg"
-	},
-	{
-		"id": "pizza",
-		"url": "pizza",
-		"name": "Pizza",
-		"category": "Entreés",
-		"imagepath": "pizza.jpg"
+		"id": "calder3",
+		"url": "calder-the_arch",
+		"artist": "Alexander Calder",
+		"name": "The Arch, 1975",
+		"neighborhood": "South Woods",
+		"mainimage": "main-calder-the_arch.jpg",
+		"thumbnail": "thumb-calder-black_flag.jpg"
 	}
 ]

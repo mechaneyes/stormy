@@ -1,9 +1,9 @@
 var ThumbView = Backbone.View.extend({
 
 	template: Handlebars.compile(
-		'<ul>' + 
-		'{{#each models}}<li>{{attributes.name}}</li>{{/each}}' +
-		'</ul>'
+		'<div id="thumbs">' + 
+		'{{#each models}}<img src="images/{{attributes.thumbnail}}" />{{/each}}' +
+		'</div>'
 	),
 	
 	initialize: function  () {
