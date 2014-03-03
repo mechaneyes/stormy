@@ -1,15 +1,15 @@
 [
 	{
-		"id": "calder",
-		"url": "calder-the_arch",
+		"id": "calder-five_swords",
+		"url": "calder-five_swords",
 		"artist": "Alexander Calder",
-		"name": "The Arch, 1975",
+		"name": "Five Swords, 1976",
 		"neighborhood": "North Woods",
-		"mainimage": "main-calder-the_arch.jpg",
+		"mainimage": "main-calder-five_swords.jpg",
 		"thumbnail": "thumb-calder-five_swords.jpg"
 	},
 	{
-		"id": "calder2",
+		"id": "calder-the_arch",
 		"url": "calder-the_arch",
 		"artist": "Alexander Calder",
 		"name": "The Arch, 1975",
@@ -18,12 +18,12 @@
 		"thumbnail": "thumb-calder-the_arch.jpg"
 	},
 	{
-		"id": "calder3",
-		"url": "calder-the_arch",
+		"id": "calder-black_flag",
+		"url": "calder-black_flag",
 		"artist": "Alexander Calder",
-		"name": "The Arch, 1975",
-		"neighborhood": "South Woods",
-		"mainimage": "main-calder-the_arch.jpg",
+		"name": "Black Flag, 1974",
+		"neighborhood": "East Woods",
+		"mainimage": "main-calder-black_flag.jpg",
 		"thumbnail": "thumb-calder-black_flag.jpg"
 	}
 ]

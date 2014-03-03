@@ -1,6 +1,6 @@
 var SingleSculpture = Backbone.View.extend({
 	template: Handlebars.compile(
-		'<div>' +
+		'<div class="single-sculpture">' +
 		// '<h1>{{name}}</h1>' +
 		// '<p><span class="label">{{neighborhood}}</span></p>' +
 		'<img src="images/{{mainimage}}" />' +
