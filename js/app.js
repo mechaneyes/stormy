@@ -23,10 +23,12 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	homepage: function () {
+		$('#top-bar').hide();
 		$('#app').html(this.homepageView.render().el);
 	},
 
 	thumbs: function () {
+		$('#top-bar').show();
 		$('#app').html(this.thumbView.render().el);
 	},
 

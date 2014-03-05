@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="js/lib/handlebars.js"></script>
 
 	<script type="text/javascript" src="js/models/sculpture.js"></script>
-	<script type="text/javascript" src="js/collections/menuitems.js"></script>
+	<!--<script type="text/javascript" src="js/collections/menuitems.js"></script>-->
 	<script type="text/javascript" src="js/collections/sculptures.js"></script>
 	<script type="text/javascript" src="js/views/homepage.js"></script>
 	<script type="text/javascript" src="js/views/homer.js"></script>
@@ -35,15 +35,16 @@
 	</div> -->
 
 	<div class="container" id="top-bar">
-		<a id="back-button" ><img src="images/title-bar-back.png" /></a>
+		<div id="back-button" ><img src="images/title-bar-back.png" /></div>
 	</div>
 
-	<div class="container" id="app">
-
-	</div><!-- -->
+	<div class="container" id="app"></div>
 
 <script>
-$('#back-button').click( function() {window.history.back()});
+$( document ).ready(function() {
+	// $('#homepage').parent('.container').siblings().find('.container').hide();
+	$('#back-button img').click( function() {window.history.back()});
+});
 </script>
 
 </body>

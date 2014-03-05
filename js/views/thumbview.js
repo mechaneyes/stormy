@@ -1,6 +1,9 @@
 var ThumbView = Backbone.View.extend({
 
 	template: Handlebars.compile(
+		// '<div class="container" id="top-bar">' +
+		// 	'<div id="back-button" ><img src="images/title-bar-back.png" /></div>' +
+		// '</div>' +
 		'<div id="thumbs">' + 
 		'<h2>Thumbnails</h2>' +
 		'{{#each models}}' +
@@ -21,5 +24,4 @@ var ThumbView = Backbone.View.extend({
 		this.$el.html(this.template(this.collection));
 		return this;
 	}
-
 });
