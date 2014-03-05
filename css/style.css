@@ -3,8 +3,10 @@ body {padding:0px; background:#777;}
 .container h1 {margin-bottom:30px; padding-left:11px;}
 .container h1 a {color:black;}
 
+#thumbs {margin-top:40px;}
+#thumbs h2 {margin:auto; padding-bottom:50px; text-align:center;}
 #thumbs img {width:159px;}
 #thumbs a {float:left; padding-top:2px;}
-#thumbs a:nth-child(odd) {padding-right:2px;}
+#thumbs a:nth-child(even) {padding-right:2px;}
 
 /*.single-sculpture img {width:100%;}*/

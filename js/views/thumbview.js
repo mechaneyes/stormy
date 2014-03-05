@@ -2,6 +2,7 @@ var ThumbView = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		'<div id="thumbs">' + 
+		'<h2>Thumbnails</h2>' +
 		'{{#each models}}' +
 			'<a href="#/sculptures/{{attributes.url}}">' +
 				'<img src="images/{{attributes.thumbnail}}" />' +

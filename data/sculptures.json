@@ -25,5 +25,14 @@
 		"neighborhood": "East Woods",
 		"mainimage": "main-calder-black_flag.jpg",
 		"thumbnail": "thumb-calder-black_flag.jpg"
+	},
+	{
+		"id": "thumb-goldsworthy-one_wall",
+		"url": "thumb-goldsworthy-one_wall",
+		"artist": "Andy Goldsworthy",
+		"name": "Five Men, Seventeen Days, Fifteen Boulders, One Wall, 2010",
+		"neighborhood": "East Woods",
+		"mainimage": "main-goldsworthy-one_wall.jpg",
+		"thumbnail": "thumb-goldsworthy-one_wall.jpg"
 	}
 ]
