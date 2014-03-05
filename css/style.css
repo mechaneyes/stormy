@@ -1,8 +1,9 @@
-body {background:#777;}
-.container {width:640px; background:white;}
+body {padding:0px; background:#777;}
+.container {width:320px; background:white;}
 .container h1 {margin-bottom:30px; padding-left:11px;}
 .container h1 a {color:black;}
 
+#thumbs img {width:159px;}
 #thumbs a {float:left; padding-top:2px;}
 #thumbs a:nth-child(odd) {padding-right:2px;}
 
