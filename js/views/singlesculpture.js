@@ -14,36 +14,19 @@ var SingleSculpture = Backbone.View.extend({
 	id: 'map',
 
 	initialize: function  () {
+		myLatlng = new google.maps.LatLng(41.428304, -74.061790),
 		mapOptions = {
-		    zoom: 8,
-		    center: new google.maps.LatLng(-34.397, 150.644)
-		  };
-		// this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+			zoom: 17,
+			center: myLatlng,
+			mapTypeId: google.maps.MapTypeId.SATELLITE,
+			disableDefaultUI: true
+		};
+
 		this.render();
 	},
-
-	// deleteItem: function () {
-	// 	this.model.destroy(
-	// 		{
-	// 			success: function (model) {
-	// 				app.menuItems.remove(model.get('id'));
-	// 				app.navigate("", {trigger: true});
-	// 			}
-	// 		}
-	// 	);
-	// },
 	
 	render: function () {
 		this.$el.html(this.template(this.model.attributes));
-
-		
-
-
 		return this;
-	},
-
-	drawmap: function() {
-		this.map = new google.maps.Map(document.getElementById('the-map'), mapOptions);
-		// this.$el.append();
 	}
 });
