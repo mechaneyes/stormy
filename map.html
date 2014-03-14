@@ -9,11 +9,11 @@
 	<script type="text/javascript" src="js/lib/backbone-min.js"></script>
 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/lib/handlebars.js"></script>
-	<script type="text/javascript" src="js/lib/backbone.googlemaps.js"></script>
 
 	<script type="text/javascript" src="js/models/sculpture.js"></script>
 	<!--<script type="text/javascript" src="js/collections/menuitems.js"></script>-->
 
+	<script type="text/javascript" src="js/lib/backbone.googlemaps.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6BZln5bCOyG21BWXmJrUwsoKZTmzdMI0&sensor=false"></script>
 
 	<script type="text/javascript" src="js/collections/sculptures.js"></script>
@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="js/views/homer.js"></script>
 	<script type="text/javascript" src="js/views/thumbview.js"></script>
 	<script type="text/javascript" src="js/views/singlesculpture.js"></script>
-	<script type="text/javascript" src="js/views/map.js"></script>
+	<script type="text/javascript" src="js/views/googlemap.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -44,35 +44,77 @@
 	</div>
 
 	<div class="container" id="app"></div>
-	<div id="temp-map" style="width:230px; height:230px;"></div>
+	<div id="map_canvas" style="width:640px; height:640px"></div>
 
-<script>
-$(function() {
-	$('#back-button img').click( function() {window.history.back()});
-	// APP = {};
+	<!-- TEMPLATE: InfoWindow
+	 ============================== -->
+	<script id="infoWindow-template" type="text/html">
+	  <h2><%=title %></h2>
+	  <p>Latitude: <%=lat %></p>
+	  <p>Longitude: <%=lng %></p>
+	</script>
 
-	// APP.Map = Backbone.Model.extend({
-	//   defaults: {
-	//     center: new google.maps.LatLng(-34.397, 150.644),
-	//     zoom: 8,
-	//     mapTypeId: google.maps.MapTypeId.ROADMAP
-	//   }
-	// });
-	// APP.map = new APP.Map();
 
-	// APP.MapView = Backbone.View.extend({
-	//   id: 'map',
-	//   initialize: function(){
-	//     this.map = new google.maps.Map(this.el, this.model.attributes);
-	//     this.render();
-	//   },
-	//   render: function(){
-	//     $('#map').replaceWith(this.el);
-	//   }
-	// });
-	// APP.mapView = new APP.MapView({model: APP.map});
-});
-</script>
+	<script type="text/javascript">
+	  /**
+	   * Example App
+	   */
+
+	  // Sample Data
+	  var places = new Backbone.GoogleMaps.LocationCollection([
+	    {
+	      title: "Walker Art Center",
+	      lat: 44.9796635,
+	      lng: -93.2748776
+	    },
+	    {
+	      title: "Science Museum of Minnesota",
+	      lat: 44.9429618,
+	      lng: -93.0981016
+	    },
+	    {
+	      title: "The Museum of Russian Art",
+	      lat: 44.9036337,
+	      lng: -93.2755413
+	    },
+	    {
+	      title: "Park Tavern",
+	      lat: 44.9413272,
+	      lng: -93.3705791,
+	    },
+	    {
+	      title: "Chatterbox Pub",
+	      lat: 44.9393882,
+	      lng: -93.2391039
+	    },
+	    {
+	      title: "Acadia Cafe",
+	      lat: 44.9709853,
+	      lng: -93.2470717
+	    }
+	  ]);
+
+
+	  $(document).ready(function() {
+	    var mapOptions = {
+	      center: new google.maps.LatLng(44.9796635, -93.2748776),
+	      zoom: 12,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    }
+
+	    // Instantiate map
+	    var map = new google.maps.Map($('#map_canvas')[0], mapOptions);
+
+	    // Render Markers
+	    var markerCollectionView = new Backbone.GoogleMaps.MarkerCollectionView({
+	      collection: places,
+	      map: map
+	    });
+	    markerCollectionView.render();
+	  });
+
+
+	</script>
 
 </body>
 </html>

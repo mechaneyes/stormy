@@ -5,7 +5,7 @@ var ThumbView = Backbone.View.extend({
 		// 	'<div id="back-button" ><img src="images/title-bar-back.png" /></div>' +
 		// '</div>' +
 		'<div id="thumbs">' + 
-		'<h2>Thumbnails</h2>' +
+		'<h2>North Woods</h2>' +
 		'{{#each models}}' +
 			'<a href="#/sculptures/{{attributes.url}}">' +
 				'<img src="images/{{attributes.thumbnail}}" />' +

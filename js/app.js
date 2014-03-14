@@ -2,7 +2,8 @@ var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "homepage",
 		"thumbs": "thumbs",
-		"sculptures/:item": "itemDetails"
+		"sculptures/:item": "sculptureDetails",
+		"googlemap": "googleMap"
 	},
 
 	initialize: function  () {
@@ -20,6 +21,7 @@ var AppRouter = Backbone.Router.extend({
 		this.thumbView = new ThumbView({collection: this.sculptures});
 
 		this.homepageView = new Homepage();
+
 	},
 
 	homepage: function () {
@@ -32,14 +34,14 @@ var AppRouter = Backbone.Router.extend({
 		$('#app').html(this.thumbView.render().el);
 	},
 
-	itemDetails: function (item) {
+	sculptureDetails: function (item) {
 		this.singleSculptureView.model = this.sculptures.get(item);
 		$('#app').html(this.singleSculptureView.render().el);
-	}
+		this.map = new google.maps.Map(document.getElementById('the-map'), mapOptions);
+	},
 });
 
-var app = new AppRouter();
-
 $(function() {
+	app = new AppRouter();
 	Backbone.history.start();
 });
