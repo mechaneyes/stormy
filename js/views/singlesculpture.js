@@ -11,22 +11,27 @@ var SingleSculpture = Backbone.View.extend({
 		'<div id="the-map" style="width:320px; height:320px;"></div>'
 	),
 
-	id: 'map',
-
-	initialize: function  () {
-		myLatlng = new google.maps.LatLng(41.428304, -74.061790),
-		mapOptions = {
-			zoom: 17,
-			center: myLatlng,
-			mapTypeId: google.maps.MapTypeId.SATELLITE,
-			disableDefaultUI: true
-		};
-
+	initialize: function () {
 		this.render();
 	},
 	
 	render: function () {
 		this.$el.html(this.template(this.model.attributes));
 		return this;
+	},
+
+	loadMap: function() {
+		var sculptLatLng = new google.maps.LatLng(this.model.get('latitude'), this.model.get('longitude'));
+		var mapOptions = {
+			zoom: this.model.get('zoom'),
+			center: sculptLatLng,
+			mapTypeId: google.maps.MapTypeId.SATELLITE,
+			disableDefaultUI: true
+		};
+		var map = new google.maps.Map(document.getElementById('the-map'), mapOptions);
+		var marker = new google.maps.Marker({
+		    position: sculptLatLng,
+		    map: map
+		});
 	}
 });

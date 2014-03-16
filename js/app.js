@@ -37,13 +37,11 @@ var AppRouter = Backbone.Router.extend({
 	sculptureDetails: function (item) {
 		this.singleSculptureView.model = this.sculptures.get(item);
 		$('#app').html(this.singleSculptureView.render().el);
+
+		// Need to load map after the rest of the DOM's loaded
+		this.singleSculptureView.loadMap();
 		
-		var map = new google.maps.Map(document.getElementById('the-map'), mapOptions);
-		var marker = new google.maps.Marker({
-		    position: myLatlng,
-		    map: map
-		});
-	},
+	}
 });
 
 $(function() {
