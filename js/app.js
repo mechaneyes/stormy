@@ -39,8 +39,7 @@ var AppRouter = Backbone.Router.extend({
 		$('#app').html(this.singleSculptureView.render().el);
 
 		// Need to load map after the rest of the DOM's loaded
-		this.singleSculptureView.loadMap();
-		
+		this.singleSculptureView.loadMap();		
 	}
 });
 

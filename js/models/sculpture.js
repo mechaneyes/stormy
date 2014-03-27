@@ -3,7 +3,6 @@ var Sculpture = Backbone.Model.extend({
 	// url: '../../data/menu-items.json',
 	defaults: {
 		zoom: 17,
-		center: 'google.maps.LatLng(41.428304, -74.061790)',
 		latitude: '41.428304',
 		longitude: '-74.061790',
 		mapTypeId: 'google.maps.MapTypeId.SATELLITE',

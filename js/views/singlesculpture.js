@@ -33,5 +33,6 @@ var SingleSculpture = Backbone.View.extend({
 		    position: sculptLatLng,
 		    map: map
 		});
+		console.log(sculptLatLng);
 	}
 });
