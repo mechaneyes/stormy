@@ -21,7 +21,7 @@ var ThumbView = Backbone.View.extend({
 	},
 	
 	render: function () {
-		this.$el.html(this.template(this.collection));
+		this.$el.html(this.template(this.collection)).fadeIn(900);
 		return this;
 	}
 });

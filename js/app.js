@@ -22,6 +22,9 @@ var AppRouter = Backbone.Router.extend({
 
 		this.homepageView = new Homepage();
 
+		// this.instance = new;
+		// app.Views.App();
+
 	},
 
 	homepage: function () {
@@ -39,7 +42,11 @@ var AppRouter = Backbone.Router.extend({
 		$('#app').html(this.singleSculptureView.render().el);
 
 		// Need to load map after the rest of the DOM's loaded
-		this.singleSculptureView.loadMap();		
+		// this.singleSculptureView.loadMap();
+		var _this = this;
+		setTimeout(function() {
+			_this.singleSculptureView.loadMap();
+		}, 600);
 	}
 });
 

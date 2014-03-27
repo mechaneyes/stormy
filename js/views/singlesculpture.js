@@ -16,7 +16,13 @@ var SingleSculpture = Backbone.View.extend({
 	},
 	
 	render: function () {
-		this.$el.html(this.template(this.model.attributes));
+		// this.$el.html(this.template(this.model.attributes));
+		this.$el.html(this.template(this.model.attributes)).fadeIn(900);
+
+		// this.setTimeout(function() {
+		// 	// this.loadMap();
+		// 	console.log('delayed');
+		// }, 4000);
 		return this;
 	},
 
@@ -33,6 +39,6 @@ var SingleSculpture = Backbone.View.extend({
 		    position: sculptLatLng,
 		    map: map
 		});
-		console.log(sculptLatLng);
+		// console.log(sculptLatLng);
 	}
 });

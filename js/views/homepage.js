@@ -10,7 +10,7 @@ var Homepage = Backbone.View.extend({
 	
 	render: function () {
 		// $('#top-bar').hide();
-		this.$el.html(this.template());
+		this.$el.html(this.template()).fadeIn(900);
 		return this;
 	}
 });
