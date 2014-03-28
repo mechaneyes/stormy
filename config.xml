@@ -14,7 +14,7 @@
         Ray Weitzenberg
     </author>
 
-    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="phonegap-version" value="3.1.0" />
     <preference name="orientation" value="portrait" />
     <!-- statusbar's color won't stick in iOS 7 ... Waiting for a fix -->
     <preference name="ios-statusbarstyle" value="black-opaque" />
