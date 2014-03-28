@@ -2,8 +2,7 @@ var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "homepage",
 		"thumbs": "thumbs",
-		"sculptures/:item": "sculptureDetails",
-		"googlemap": "googleMap"
+		"sculptures/:item": "sculptureDetails"
 	},
 
 	initialize: function  () {
@@ -21,10 +20,6 @@ var AppRouter = Backbone.Router.extend({
 		this.thumbView = new ThumbView({collection: this.sculptures});
 
 		this.homepageView = new Homepage();
-
-		// this.instance = new;
-		// app.Views.App();
-
 	},
 
 	homepage: function () {
@@ -41,8 +36,12 @@ var AppRouter = Backbone.Router.extend({
 		this.singleSculptureView.model = this.sculptures.get(item);
 		$('#app').html(this.singleSculptureView.render().el);
 
-		// Need to load map after the rest of the DOM's loaded
-		// this.singleSculptureView.loadMap();
+
+		// Map must be loaded after the rest of the DOM
+
+		// Setting _this = this because "this" refers to "window" when setTimeout calls the function
+		//  - so the method call must be wrapped in an anonymous function
+		//  - http://bit.ly/1i0tZz0
 		var _this = this;
 		setTimeout(function() {
 			_this.singleSculptureView.loadMap();
