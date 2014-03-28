@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.example.stormy" version="0.0.1">
+    <name>Storm King Mapped</name>
+    <description>
+    Mapping Storm King with iOS
+    </description>
+    <author href="http://mechaneyes.com" email="ray@mechaneyes.com">
+    Ray Weitzenberg
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+</widget>
