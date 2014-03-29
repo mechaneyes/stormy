@@ -2,9 +2,11 @@ var Neighborhoods = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		'<div id="homepage">' +
+			'<img src ="images/neighborhoods-header" />' +
 			'<a href="#/thumbs">' +
-				'<img src="images/neighborhoods.jpg" />' +
+				'<img src="images/neighborhoods-northWoods.jpg" />' +
 			'</a>' +
+			'<img src ="images/neighborhoods-rest" />' +
 		'</div>'
 	),
 	
