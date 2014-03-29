@@ -1,6 +1,7 @@
 var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "homepage",
+		"neighborhoods": "neighborhoods",
 		"thumbs": "thumbs",
 		"sculptures/:item": "sculptureDetails"
 	},
@@ -20,11 +21,18 @@ var AppRouter = Backbone.Router.extend({
 		this.thumbView = new ThumbView({collection: this.sculptures});
 
 		this.homepageView = new Homepage();
+
+		this.neighborhoodsView = new Neighborhoods();
 	},
 
 	homepage: function () {
 		$('#top-bar').hide();
 		$('#app').html(this.homepageView.render().el);
+	},
+
+	neighborhoods: function () {
+		$('#top-bar').show();
+		$('#app').html(this.neighborhoodsView.render().el);
 	},
 
 	thumbs: function () {

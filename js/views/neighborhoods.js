@@ -1,9 +1,9 @@
-var Homepage = Backbone.View.extend({
+var Neighborhoods = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		'<div id="homepage">' +
-			'<a href="#/neighborhoods">' +
-				'<img src="images/homepage.jpg" />' +
+			'<a href="#/thumbs">' +
+				'<img src="images/neighborhoods.jpg" />' +
 			'</a>' +
 		'</div>'
 	),
