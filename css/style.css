@@ -3,11 +3,11 @@ body {padding:0px; background:black;}
 .container h1 {margin-bottom:30px; padding-left:11px;}
 .container h1 a {color:black;}
 
-#thumbs {padding-top:30px; background: white;}
+#thumbs {margin-top:-2px; padding-top:30px; padding-top:0; background: white;}
 #thumbs h2 {margin:auto; padding-bottom:40px; text-align:center;}
 #thumbs img {width:159px;}
 #thumbs a {float:left; padding-top:2px; background: white;}
-#thumbs a:nth-child(even) {padding-right:2px;}
+#thumbs a:nth-child(odd) {padding-right:2px;}
 
 /*.single-sculpture img {width:100%;}*/
 
