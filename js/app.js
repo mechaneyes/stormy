@@ -2,11 +2,23 @@ var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "homepage",
 		"neighborhoods": "neighborhoods",
+		"neighborhoods/:nabe": "hoods",
 		"thumbs": "thumbs",
+		"museumhill": "museumHill",
 		"sculptures/:item": "sculptureDetails"
 	},
 
 	initialize: function  () {
+
+		this.neighborhoods = new Sculptures();
+		this.neighborhoods.fetch();
+
+		this.neighborhoodModel = new Neighborhood();
+		this.singleNeighborhoodView = new SingleNeighborhood(
+			{
+				model: this.neighborhoodModel
+			}
+		);
 
 		this.sculptures = new Sculptures();
 		this.sculptures.fetch();
@@ -20,9 +32,12 @@ var AppRouter = Backbone.Router.extend({
 		
 		this.homepageView = new Homepage();
 
-		this.neighborhoodView = new Neighborhood();
+		this.neighborhoodView = new Neighborhoods();
 
 		this.thumbView = new ThumbView({collection: this.sculptures});
+		this.museumHillView = new MuseumHill({collection: this.sculptures});
+
+		// this.museumHillView = new MuseumHill({collection: this.sculptures});
 
 		$('#top-bar').hide();
 	},
@@ -43,6 +58,18 @@ var AppRouter = Backbone.Router.extend({
 		$('#top-bar').fadeIn(900);
 		$('#app').html(this.thumbView.render().el);
 	},
+
+	museumHill: function () {
+		$('#top-bar').hide();
+		$('#top-bar').fadeIn(900);
+		$('#app').html(this.museumHillView.render().el);
+	},
+
+	// hoods: function () {
+	// 	$('#top-bar').hide();
+	// 	$('#top-bar').fadeIn(900);
+	// 	$('#app').html(this.thumbView.render().el);
+	// },
 
 	sculptureDetails: function (item) {
 		this.singleSculptureView.model = this.sculptures.get(item);

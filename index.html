@@ -13,11 +13,15 @@
 
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6BZln5bCOyG21BWXmJrUwsoKZTmzdMI0&sensor=false"></script>
 
+	<script type="text/javascript" src="js/models/neighborhood.js"></script>
 	<script type="text/javascript" src="js/models/sculpture.js"></script>
+	<script type="text/javascript" src="js/collections/neighborhoods.js"></script>
 	<script type="text/javascript" src="js/collections/sculptures.js"></script>
 	<script type="text/javascript" src="js/views/homepage.js"></script>
+	<script type="text/javascript" src="js/views/northwoods.js"></script>
+	<script type="text/javascript" src="js/views/museumhill.js"></script>
 	<script type="text/javascript" src="js/views/neighborhoods.js"></script>
-	<script type="text/javascript" src="js/views/homer.js"></script>
+	<script type="text/javascript" src="js/views/singleneighborhood.js"></script>
 	<script type="text/javascript" src="js/views/thumbview.js"></script>
 	<script type="text/javascript" src="js/views/singlesculpture.js"></script>
 	<script type="text/javascript" src="js/views/map.js"></script>
@@ -38,28 +42,6 @@
 <script>
 $(function() {
 	$('#back-button img').click( function() {window.history.back()});
-	// APP = {};
-
-	// APP.Map = Backbone.Model.extend({
-	//   defaults: {
-	//     center: new google.maps.LatLng(-34.397, 150.644),
-	//     zoom: 8,
-	//     mapTypeId: google.maps.MapTypeId.ROADMAP
-	//   }
-	// });
-	// APP.map = new APP.Map();
-
-	// APP.MapView = Backbone.View.extend({
-	//   id: 'map',
-	//   initialize: function(){
-	//     this.map = new google.maps.Map(this.el, this.model.attributes);
-	//     this.render();
-	//   },
-	//   render: function(){
-	//     $('#map').replaceWith(this.el);
-	//   }
-	// });
-	// APP.mapView = new APP.MapView({model: APP.map});
 });
 </script>
 

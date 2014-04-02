@@ -1,4 +1,4 @@
-var Sculptures = Backbone.Collection.extend({
+var Neighborhoods = Backbone.Collection.extend({
 	comparator: 'name',
 	model: Sculpture,
 	url: './data/sculptures.json'

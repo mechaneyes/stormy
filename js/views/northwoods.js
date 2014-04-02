@@ -1,4 +1,4 @@
-var ThumbView = Backbone.View.extend({
+var NorthWoods = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		// '<div class="container" id="top-bar">' +

@@ -1,4 +1,4 @@
-var Neighborhood = Backbone.View.extend({
+var Neighborhoods = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		// '<div class="container" id="top-bar">' +
@@ -9,6 +9,9 @@ var Neighborhood = Backbone.View.extend({
 			'<img src ="images/neighborhoods-header.jpg" />' +
 			'<a href="#/thumbs">' +
 				'<img src="images/neighborhoods-northWoods.jpg" />' +
+			'</a>' +
+			'<a href="#/museumhill">' +
+				'<img src="images/neighborhoods-museumHill.jpg" />' +
 			'</a>' +
 			'<img src ="images/neighborhoods-rest.jpg" />' +
 		'</div>'

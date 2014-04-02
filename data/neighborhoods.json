@@ -1,0 +1,44 @@
+[
+	{
+		"id": "calder-five_swords",
+		"url": "calder-five_swords",
+		"artist": "Alexander Calder",
+		"name": "Five Swords, 1976",
+		"neighborhood": "North Woods",
+		"mainimage": "main-calder-five_swords.jpg",
+		"thumbnail": "thumb-calder-five_swords.jpg",
+		"latitude": "41.423567",
+        "longitude": "-74.059580"
+	},
+	{
+		"id": "calder-the_arch",
+		"url": "calder-the_arch",
+		"artist": "Alexander Calder",
+		"name": "The Arch, 1975",
+		"neighborhood": "South Woods",
+		"mainimage": "main-calder-the_arch.jpg",
+		"thumbnail": "thumb-calder-the_arch.jpg"
+	},
+	{
+		"id": "calder-black_flag",
+		"url": "calder-black_flag",
+		"artist": "Alexander Calder",
+		"name": "Black Flag, 1974",
+		"neighborhood": "East Woods",
+		"mainimage": "main-calder-black_flag.jpg",
+		"thumbnail": "thumb-calder-black_flag.jpg",
+		"latitude": "41.423960",
+        "longitude": "-74.058648"
+	},
+	{
+		"id": "thumb-goldsworthy-one_wall",
+		"url": "thumb-goldsworthy-one_wall",
+		"artist": "Andy Goldsworthy",
+		"name": "Five Men, Seventeen Days, Fifteen Boulders, One Wall, 2010",
+		"neighborhood": "East Woods",
+		"mainimage": "main-goldsworthy-one_wall.jpg",
+		"thumbnail": "thumb-goldsworthy-one_wall.jpg",
+		"latitude": "41.417191",
+        "longitude": "-74.064789"
+	}
+]
