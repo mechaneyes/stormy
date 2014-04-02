@@ -18,11 +18,13 @@ var AppRouter = Backbone.Router.extend({
 			}
 		);
 		
-		this.thumbView = new ThumbView({collection: this.sculptures});
-
 		this.homepageView = new Homepage();
 
-		this.neighborhoodsView = new Neighborhoods();
+		this.neighborhoodView = new Neighborhood();
+
+		this.thumbView = new ThumbView({collection: this.sculptures});
+
+		$('#top-bar').hide();
 	},
 
 	homepage: function () {
@@ -31,12 +33,14 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	neighborhoods: function () {
-		$('#top-bar').show();
-		$('#app').html(this.neighborhoodsView.render().el);
+		$('#top-bar').hide();
+		$('#top-bar').fadeIn(900);
+		$('#app').html(this.neighborhoodView.render().el);
 	},
 
 	thumbs: function () {
-		$('#top-bar').show();
+		$('#top-bar').hide();
+		$('#top-bar').fadeIn(900);
 		$('#app').html(this.thumbView.render().el);
 	},
 
@@ -44,12 +48,13 @@ var AppRouter = Backbone.Router.extend({
 		this.singleSculptureView.model = this.sculptures.get(item);
 		$('#app').html(this.singleSculptureView.render().el);
 
+		/*
+		Map must be loaded after the rest of the DOM
 
-		// Map must be loaded after the rest of the DOM
-
-		// Setting _this = this because "this" refers to "window" when setTimeout calls the function
-		//  - so the method call must be wrapped in an anonymous function
-		//  - http://bit.ly/1i0tZz0
+		Setting _this = this because "this" refers to "window" when setTimeout calls the function
+		 - so the method call must be wrapped in an anonymous function
+		 - http://bit.ly/1i0tZz0
+		*/
 		var _this = this;
 		setTimeout(function() {
 			_this.singleSculptureView.loadMap();

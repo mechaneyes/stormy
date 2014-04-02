@@ -1,4 +1,4 @@
-var Neighborhoods = Backbone.View.extend({
+var Neighborhood = Backbone.View.extend({
 
 	template: Handlebars.compile(
 		// '<div class="container" id="top-bar">' +
